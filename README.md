@@ -31,7 +31,7 @@ SELECT
 FROM superstore 
 WHERE YEAR(Order_Date) = 2017;
 
-## 🔹 **Top 5 Products by Sales**
+### 🔹 **Top 5 Products by Sales**
 SELECT 
     Product_Name, 
     SUM(Sales) AS Total_Sales 
