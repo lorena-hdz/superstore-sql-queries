@@ -32,6 +32,7 @@ FROM superstore
 WHERE YEAR(Order_Date) = 2017;
 
 ### 🔹 **Top 5 Products by Sales**
+```sql
 SELECT 
     Product_Name, 
     SUM(Sales) AS Total_Sales 
@@ -41,6 +42,7 @@ ORDER BY Total_Sales DESC
 LIMIT 5;
 
 ### 🔹 **Year-over-Year Sales Growth**
+```sql
 SELECT 
     YEAR(Order_Date) AS Year, 
     SUM(Sales) AS Total_Sales 
@@ -50,6 +52,7 @@ GROUP BY YEAR(Order_Date)
 ORDER BY Year;
 
 ### 🔹 **Orders Shipped Same-Day vs. Other Shipping Modes**
+```sql
 SELECT 
     CASE 
         WHEN Shipping_Mode = 'Same Day' THEN 'Same Day' 
