@@ -23,36 +23,36 @@ This project demonstrates proficiency in SQL by:
 
 ## 📂 **Featured SQL Queries**  
 ### 🔹 **Total Sales, Profit, and Quantity for 2017**  
-```sql
+(```sql
 SELECT 
     SUM(Sales) AS Total_Sales, 
     SUM(Profit) AS Total_Profit, 
     SUM(Quantity) AS Total_Quantity 
 FROM superstore 
-WHERE YEAR(Order_Date) = 2017;
+WHERE YEAR(Order_Date) = 2017);
 
 ### 🔹 **Top 5 Products by Sales**
-```sql
+(```sql
 SELECT 
     Product_Name, 
     SUM(Sales) AS Total_Sales 
 FROM superstore 
 GROUP BY Product_Name 
 ORDER BY Total_Sales DESC 
-LIMIT 5;
+LIMIT 5);
 
 ### 🔹 **Year-over-Year Sales Growth**
-```sql
+(```sql
 SELECT 
     YEAR(Order_Date) AS Year, 
     SUM(Sales) AS Total_Sales 
 FROM superstore 
 WHERE YEAR(Order_Date) IN (2016, 2017) 
 GROUP BY YEAR(Order_Date) 
-ORDER BY Year;
+ORDER BY Year);
 
 ### 🔹 **Orders Shipped Same-Day vs. Other Shipping Modes**
-```sql
+(```sql
 SELECT 
     CASE 
         WHEN Shipping_Mode = 'Same Day' THEN 'Same Day' 
@@ -60,7 +60,7 @@ SELECT
     END AS Shipping_Type, 
     COUNT(Order_ID) AS Total_Orders 
 FROM superstore 
-GROUP BY Shipping_Type;
+GROUP BY Shipping_Type);
 
 ## 🚀 **How to Use**  
 1. **Download the SQL file**: Click on the `superstore_sql_queries.sql` file and select "Download."  
